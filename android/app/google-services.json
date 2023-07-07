@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "308500907524",
+    "project_id": "offerta-409fa",
+    "storage_bucket": "offerta-409fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308500907524:android:6103d06411757af4195751",
+        "android_client_info": {
+          "package_name": "com.ofertasvAppMtechub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308500907524-kpofnc0en7ar7mnjvotekahro8i50r80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ofertasvAppMtechub",
+            "certificate_hash": "fd33fc49d1e4ca70f67fd2676fba33e739dd5365"
+          }
+        },
+        {
+          "client_id": "308500907524-tdve7467rtmcm13ecjdodocvsdeo0c2l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ofertasvAppMtechub",
+            "certificate_hash": "f3c8b9de9568c8fb019f0c2931a959c0d6d58d2e"
+          }
+        },
+        {
+          "client_id": "308500907524-9fir9mpslr5qvka1cd8epe1oqk2kpvk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-xRtPFBQGO8xJmkcU3iviA18XEH8LUVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308500907524-9fir9mpslr5qvka1cd8epe1oqk2kpvk2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308500907524-1obshpcrhjp02k95421l886ulf3r76s6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ofertasvappmtechub"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308500907524:android:4623ab6fe8e0edee195751",
+        "android_client_info": {
+          "package_name": "com.ofertasvappmtechub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308500907524-9fir9mpslr5qvka1cd8epe1oqk2kpvk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-xRtPFBQGO8xJmkcU3iviA18XEH8LUVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308500907524-9fir9mpslr5qvka1cd8epe1oqk2kpvk2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308500907524-1obshpcrhjp02k95421l886ulf3r76s6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ofertasvappmtechub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
