@@ -107,6 +107,7 @@ import AudiencePage from './src/screens/LiveStreaming/AudiencePage';
 import HostPage from './src/screens/LiveStreaming/HostPage';
 import CreateLive from './src/screens/LiveStreaming/CreateLive';
 import WatchLiveStream from './src/screens/LiveStreaming/WatchLiveStream';
+import { requestUserPermissions } from './src/RequestPermission';
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -155,6 +156,9 @@ function App() {
   //   }
   // }, []);
 
+  useEffect(()=>{
+    // requestUserPermissions()
+  },[])
   return (
     <Provider store={Store}>
       <NavigationContainer ref={navigationRef}>

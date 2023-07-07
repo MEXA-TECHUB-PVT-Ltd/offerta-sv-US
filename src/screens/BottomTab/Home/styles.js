@@ -24,24 +24,24 @@ color:Colors.Appthemecolor
     fontFamily:fontFamily.Poppins_Regular,
     color:Colors.Appthemecolor
       },
-  headericonsview: {
-    backgroundColor: "white",
-    width: wp(12),
-    height: hp(6),
-    borderRadius: wp(8),
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: hp(1),
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    },
-    shadowOpacity: 0.43,
-    shadowRadius: 9.51,
-
-    elevation: 15,
-  },
+      headericonsview: {
+        backgroundColor: "white",
+        width: wp(13),
+        height: hp(6),
+        borderRadius: wp(8),
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: hp(1),
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 7,
+        },
+        shadowOpacity: 0.43,
+        shadowRadius: 9.51,
+    
+        elevation: 15,
+      },
 
   //////////////slider/////////////////
   sliderView: {

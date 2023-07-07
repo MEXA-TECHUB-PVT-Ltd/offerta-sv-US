@@ -88,12 +88,16 @@ const CreateProfile = ({ navigation, route }) => {
 
   //////////////////////Api Calling/////////////////
   const CreateProfile = async () => {
+    const UploadPath=user_image
+    // console.log(UploadPath,'before replace');
+    const ReplacePath=UploadPath.replace('file:///','/')
+    // console.log(ReplacePath,'dshe');
     const data = [
       {
         name: "profile",
         filename: "avatar-png.png",
         type: "image/foo",
-        data: RNFetchBlob.wrap(user_image),
+        data: RNFetchBlob.wrap(ReplacePath),
       },
       { name: "email", data: predata.useremail },
       { name: "username", data: username },

@@ -86,7 +86,7 @@ const VideoBottomSheet = (props) => {
   };
 
   const takePhotoFromCamera = async () => {
-    requestCameraPermission();
+    // requestCameraPermission();
     var options = {
       storageOptions: {
         skipBackup: true,
@@ -197,7 +197,7 @@ const VideoBottomSheet = (props) => {
         <TouchableOpacity
           onPress={() => {
             takePhotoFromCamera();
-            props.refRBSheet.current.close();
+            // props.refRBSheet.current.close();
           }}
           //onPress={props.takePhotoFromCamera}
           style={styles.modaltextview}
@@ -221,7 +221,7 @@ const VideoBottomSheet = (props) => {
         <TouchableOpacity
           onPress={() => {
             choosePhotoFromLibrary();
-            props.refRBSheet.current.close();
+            // props.refRBSheet.current.close();
           }}
           style={styles.modaltextview}
         >

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, BackHandler} from 'react-native';
+import {StyleSheet, Text, View, BackHandler, SafeAreaView} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {
   heightPercentageToDP as hp,
@@ -160,7 +160,7 @@ const PaypalPayment = ({navigation, route}) => {
       console.log(':::::::::::::::::::::::::::');
       console.log('webviewstate', webviewState);
       if (webviewState?.url?.includes('https://example.com/cancel')) {
-        console.log('here....');
+        console.log('here....','paypal payment mai');
         clearPaypalState();
         return;
       }
@@ -184,6 +184,7 @@ const PaypalPayment = ({navigation, route}) => {
   const clearPaypalState = () => {
     setPayPalUrl('');
     setIsWebViewopen(false);
+    navigation.goBack();
   };
 
   const paymentSuccess = async (id, PayerID) => {
@@ -533,7 +534,7 @@ const PaypalPayment = ({navigation, route}) => {
   };
 
   return (
-    <View style={{flex: 1, backgroundColor: '#fff'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       {/* <GoogleButton
         title="pay with paypal"
         onPress={() => testPayPalPayment()}
@@ -588,7 +589,7 @@ const PaypalPayment = ({navigation, route}) => {
           }
         }}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

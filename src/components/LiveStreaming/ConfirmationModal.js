@@ -166,8 +166,9 @@ const styles = StyleSheet.create({
     //backgroundColor:'red',
   },
   cancelbtn: {
-    height: hp(5.5),
+    // height: hp(5.5),
     width: wp(28),
+    paddingVertical:hp(0.4),
     borderRadius: wp(10),
     borderColor: Colors.Appthemecolor,
     borderWidth: 0.5,
@@ -185,7 +186,8 @@ const styles = StyleSheet.create({
     elevation: 9,
   },
   donebtn: {
-    height: hp(5.5),
+    // height: hp(5.5),
+    paddingVertical:hp(0.4),
     width: wp(28),
     borderRadius: wp(10),
     backgroundColor: Colors.Appthemecolor,

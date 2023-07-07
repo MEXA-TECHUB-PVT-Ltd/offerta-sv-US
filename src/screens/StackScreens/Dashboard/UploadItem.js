@@ -397,18 +397,18 @@ const UploadItem = ({navigation, route}) => {
             justifyContent: 'center',
             overflow: 'hidden',
           }}> */}
-        <Image
-          //source={appImages.dogIcon}
-          source={{uri: item.path}}
-          // style={{ height: hp(25), width: wp(80), borderRadius: wp(6) }}
-          style={{
-            height: '100%',
-            width: '100%',
-            // backgroundColor: "white",
-            // borderRadius: wp(6),
-          }}
-          resizeMode="cover"
-        />
+          <Image
+            //source={appImages.dogIcon}
+            source={{uri: item.path}}
+            // style={{ height: hp(25), width: wp(80), borderRadius: wp(6) }}
+            style={{
+              height: '100%',
+              width: '100%',
+              // backgroundColor: "white",
+              // borderRadius: wp(6),
+            }}
+            resizeMode="cover"
+          />
         {/* </ImageBackground> */}
         <TouchableOpacity
           onPress={() => navigation.navigate('CameraViewScreen')}
@@ -816,7 +816,7 @@ const UploadItem = ({navigation, route}) => {
               <Checkbox
                 status={givingawaychecked ? 'checked' : 'unchecked'}
                 color={Colors.activetextinput}
-                uncheckedColor={Colors.activetextinput}
+                uncheckedColor={'yellow'}
                 onPress={() => {
                   setGivingawayChecked(!givingawaychecked),
                     setPrice(0),

@@ -25,8 +25,8 @@ import CamerBottomSheet from '../../../components/CameraBottomSheet/CameraBottom
 import ImagePicker from 'react-native-image-crop-picker';
 
 ////////////////////app date picker pakaage////////////////////
-import DateTimePicker from '@react-native-community/datetimepicker';
-
+// import DateTimePicker from '@react-native-community/datetimepicker';
+import DatePicker from 'react-native-date-picker';
 /////////////app styles////////////////
 import styles from './styles';
 import Uploadstyles from '../../../styles/GlobalStyles/Upload';
@@ -155,8 +155,10 @@ const AddBanner = ({route}) => {
   };
 
   const validateURL = url => {
-    var validUrl = require('valid-url');
-    if (validUrl.isUri(url)) {
+    let reg = new RegExp(
+      '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?',
+    );
+    if (reg.test(url) === true) {
       console.log('Looks like an URI');
       return true;
     } else {
@@ -164,10 +166,20 @@ const AddBanner = ({route}) => {
       return false;
     }
   };
+  const [user_id, setUser_id] = useState('');
+  const [user_status, setUser_status] = useState('');
+  const service = async () => {
+    var user_id = await AsyncStorage.getItem('Userid');
+    let user_status = await AsyncStorage.getItem('account_status');
+    setUser_id(user_id);
+    setUser_status(user_status);
+  };
+  useEffect(() => {
+    service();
+  }, []);
   //////////////////////Api Calling/////////////////
   const CreateBanner = async () => {
     setLoading(true);
-    let user_status = await AsyncStorage.getItem('account_status');
 
     if (user_status == 'block') {
       setShowBlockModal(true);
@@ -204,17 +216,6 @@ const AddBanner = ({route}) => {
         name: user_image?.split('/')?.pop(),
         type: 'image/jpeg',
       };
-      var user_id = await AsyncStorage.getItem('Userid');
-
-      // navigation?.replace("CardDetails", {
-      //   type: "addbanner",
-      //   user_id: user_id,
-      //   start_date: moment(startDate).format("YYYY-MM-DD"),
-      //   end_date: moment(endDate).format("YYYY-MM-DD"),
-      //   app_img: imageObj,
-      //   app_img_link: bannerlink,
-      //   cast: bannerPrice * daysDifference,
-      // });
 
       navigation.replace('PaymentMethods', {
         type: 'addbanner',
@@ -226,7 +227,6 @@ const AddBanner = ({route}) => {
         cast: bannerPrice * daysDifference,
         fee: bannerPrice * daysDifference,
       });
-
       setLoading(false);
     }
     setLoading(false);
@@ -339,7 +339,7 @@ const AddBanner = ({route}) => {
 
   const onstartdateChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
-    setStartDateShow(Platform.OS === 'ios');
+    // setStartDateShow(Platform.OS === 'ios');
     setStartDate(currentDate);
     var d = new Date();
     d = selectedDate;
@@ -363,7 +363,7 @@ const AddBanner = ({route}) => {
   };
   const onenddateChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
-    setEndDateShow(Platform.OS === 'ios');
+    // setEndDateShow(Platform.OS === 'ios');
     setEndDate(currentDate);
     var d = new Date();
     d = selectedDate;
@@ -430,7 +430,6 @@ const AddBanner = ({route}) => {
   return (
     <SafeAreaView style={styles.container}>
       <BlockUserView visible={showBlockModal} setVisible={setShowBlockModal} />
-
       <Loader isLoading={loading} />
       <Snackbar
         duration={2000}
@@ -446,46 +445,6 @@ const AddBanner = ({route}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}>
-        {startdateshow && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={startDate}
-            mode={startdatemode}
-            display="default"
-            locale="es-ES"
-            themeVariant="light"
-            onChange={onstartdateChange}
-            maximumDate={endDate_String ? endDate : null}
-            style={{
-              shadowColor: '#fff',
-              shadowRadius: 0,
-              shadowOpacity: 1,
-              shadowOffset: {height: 0, width: 0},
-              color: '#1669F',
-              textColor: '#1669F',
-            }}
-          />
-        )}
-        {enddateshow && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={endDate}
-            mode={enddatemode}
-            display="default"
-            locale="es-ES"
-            themeVariant="light"
-            onChange={onenddateChange}
-            minimumDate={startDate_String ? startDate : null}
-            style={{
-              shadowColor: '#fff',
-              shadowRadius: 0,
-              shadowOpacity: 1,
-              shadowOffset: {height: 0, width: 0},
-              color: '#1669F',
-              textColor: '#1669F',
-            }}
-          />
-        )}
         <CustomHeader
           headerlabel={TranslationStrings.ADD_BANNER}
           iconPress={() => {
@@ -534,14 +493,13 @@ const AddBanner = ({route}) => {
             {/* <ImageBackground
               blurRadius={4}
               resizeMode="cover"
-              source={{ uri: user_image }}
-              style={{ flex: 1, justifyContent: "center" }}
-            > */}
-            <Image
               source={{uri: user_image}}
-              style={{height: hp(20), width: wp(83)}}
-              resizeMode="cover"
-            />
+              style={{flex: 1, justifyContent: 'center'}}> */}
+              <Image
+                source={{uri: user_image}}
+                style={{height: hp(20), width: wp(83)}}
+                resizeMode="cover"
+              />
             {/* </ImageBackground> */}
           </View>
         )}
@@ -577,6 +535,77 @@ const AddBanner = ({route}) => {
               onTermChange={newLname => setEndDate(newLname)}
             />
           </TouchableOpacity>
+          {startdateshow && (
+            // <DateTimePicker
+            //   testID="dateTimePicker"
+            //   value={startDate}
+            //   mode={'date'}
+            //   display="default"
+            //   locale="es-ES"
+            //   themeVariant="light"
+            //   onChange={onstartdateChange}
+            //   maximumDate={endDate_String ? endDate : null}
+            //   style={{
+            //     shadowColor: '#fff',
+            //     shadowRadius: 0,
+            //     shadowOpacity: 1,
+            //     shadowOffset: {height: 0, width: 0},
+            //     color: '#1669F',
+            //     textColor: '#1669F',
+            //   }}
+            // />
+            <DatePicker
+              modal
+              open={startdateshow}
+              date={new Date()}
+              mode="date"
+              onConfirm={date => {
+                setStartDateShow(false);
+                onstartdateChange('ui', date);
+              }}
+              maximumDate={endDate_String ? endDate : null}
+              onCancel={() => {
+                setStartDateShow(false);
+              }}
+            />
+          )}
+          {enddateshow && (
+            // <DateTimePicker
+            //   testID="dateTimePicker"
+            //   value={endDate}
+            //   mode={enddatemode}
+            //   display="default"
+            //   locale="es-ES"
+            //   themeVariant="light"
+            //   onChange={onenddateChange}
+            //   minimumDate={startDate_String ? startDate : null}
+            //   style={{
+            //     shadowColor: '#fff',
+            //     shadowRadius: 0,
+            //     shadowOpacity: 1,
+            //     shadowOffset: {height: 0, width: 0},
+            //     color: '#1669F',
+            //     textColor: '#1669F',
+            //   }}
+            // />
+
+            <DatePicker
+              modal
+              locale='es-ES'
+              theme='light'
+              open={enddateshow}
+              date={new Date()}
+              minimumDate={startDate_String ? startDate : null}
+              mode="date"
+              onConfirm={date => {
+                setEndDateShow(false);
+                onenddateChange('ui', date);
+              }}
+              onCancel={() => {
+                setEndDateShow(false);
+              }}
+            />
+          )}
           <View
             style={{
               paddingHorizontal: 30,
@@ -589,6 +618,7 @@ const AddBanner = ({route}) => {
             </Text>
           </View>
         </View>
+
         <View style={{marginBottom: hp(15)}}>
           <CustomButtonhere
             title={TranslationStrings.PAY_NOW}
