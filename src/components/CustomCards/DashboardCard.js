@@ -53,8 +53,7 @@ const DashboardCard = props => {
         ]}>
         <View style={{marginBottom: hp(0), marginTop: hp(0)}}>
           {props?.image ? (
-            <>
-              {/* // <ImageBackground
+            // <ImageBackground
             //   blurRadius={4}
             //   resizeMode="cover"
             //   source={{uri: props.image}}
@@ -62,8 +61,8 @@ const DashboardCard = props => {
             //     // ...styles.dasboardimage,
             //     // flex: 1,
             //     justifyContent: 'center',
-            //   }}
-            //   > */}
+            //   }}>
+            <>
               <Image
                 source={{uri: props.image}}
                 style={[
@@ -80,13 +79,13 @@ const DashboardCard = props => {
                     position: 'absolute',
                     right: 0,
                     left: 0,
-                    alignItems: 'center',
                     top: 50,
+                    bottom: 50,
+                    alignItems: 'center',
                   }}>
                   <AntDesign name="play" color={'white'} size={30} />
                 </View>
               )}
-              {/* // </ImageBackground> */}
             </>
           ) : (
             <View
@@ -143,7 +142,6 @@ const DashboardCard = props => {
                     : '#576AF4',
                   position: 'absolute',
                   left: 0,
-                  // borderBottomLeftRadius: 8,
                   borderBottomRightRadius: 8,
                   paddingHorizontal: 21,
                   paddingVertical: 3,
@@ -172,10 +170,10 @@ const DashboardCard = props => {
                     : '#576AF4',
                   position: 'absolute',
                   left: 0,
-                  // borderBottomLeftRadius: 8,
                   borderBottomRightRadius: 8,
                   paddingHorizontal: 21,
                   paddingVertical: 3,
+                  // borderRadius: hp(1),
                 }}>
                 <Text
                   style={{
@@ -216,7 +214,7 @@ const DashboardCard = props => {
           {props?.added_by == 'admin' && (
             <View
               style={{
-                backgroundColor: 'purple',
+                backgroundColor: Colors.Appthemecolor,
                 position: 'absolute',
                 right: 0,
                 borderBottomLeftRadius: 8,

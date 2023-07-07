@@ -119,7 +119,7 @@ const Profile = ({navigation}) => {
         barStyle="light-content"
       />
       <View style={styles.header}>
-        <View style={{alignSelf: 'flex-end', marginTop: wp(5)}}>
+        <View style={{alignSelf: 'flex-end', marginTop: wp(10)}}>
           <Icon
             name={'settings'}
             size={25}

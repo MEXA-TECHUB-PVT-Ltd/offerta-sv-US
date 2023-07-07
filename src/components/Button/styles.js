@@ -25,7 +25,7 @@ buttoncontent:
 button:
 {
     borderRadius:wp(8),
-    height: hp(6.5),
+    // height: hp(6.5),
     alignItems:'center',
     backgroundColor:Colors.Appthemecolor,
 },

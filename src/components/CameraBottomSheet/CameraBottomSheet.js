@@ -90,7 +90,7 @@ const CamerBottomSheet = (props) => {
   // };
 
   useEffect(() => {
-    requestCameraPermission();
+    // requestCameraPermission();
   }, []);
 
   const requestCameraPermission = async () => {
@@ -129,7 +129,7 @@ const CamerBottomSheet = (props) => {
   };
 
   const takePhotoFromCamera = async () => {
-    requestCameraPermission();
+    // requestCameraPermission();
     var options = {
       storageOptions: {
         skipBackup: true,
@@ -356,8 +356,8 @@ const CamerBottomSheet = (props) => {
             props.type === "Chat_image" ||
             props.type === "verify"
               ? takePhotoFromCamera()
-              : navigation.navigate("CameraViewScreen", "Take Photo"),
-              props.refRBSheet.current.close();
+              : navigation.navigate("CameraViewScreen", "Take Photo")
+              // props.refRBSheet.current.close();
           }}
           //onPress={props.takePhotoFromCamera}
           style={styles.modaltextview}
@@ -384,8 +384,8 @@ const CamerBottomSheet = (props) => {
             props.type === "Chat_image" ||
             props.type === "verify"
               ? choosePhotoFromLibrary()
-              : navigation.navigate("CameraViewScreen", "Take Photo"),
-              props.refRBSheet.current.close();
+              : navigation.navigate("CameraViewScreen", "Take Photo")
+              // props.refRBSheet.current.close();
           }}
           style={styles.modaltextview}
         >

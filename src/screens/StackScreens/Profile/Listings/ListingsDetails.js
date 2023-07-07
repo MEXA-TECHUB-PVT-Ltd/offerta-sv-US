@@ -617,7 +617,7 @@ const ListingsDetails = ({ navigation, route }) => {
           {listingLat && listingLng > 0 ? (
             <MapView
               style={[styles.mapStyle]}
-              provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+              // provider={PROVIDER_GOOGLE} // remove if not using Google Maps
               initialRegion={{
                 latitude: listingLat,
                 longitude: listingLng,

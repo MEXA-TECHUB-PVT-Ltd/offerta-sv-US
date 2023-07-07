@@ -105,7 +105,7 @@ function CameraViewScreen({ route, navigation }) {
   };
 
   const takePhotoFromCamera = async () => {
-    requestCameraPermission();
+    // requestCameraPermission();
     console.log("taking photo from camera.....");
     setLoading(true);
     var options = {

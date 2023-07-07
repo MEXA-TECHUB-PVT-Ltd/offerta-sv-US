@@ -1,12 +1,12 @@
-import * as React from "react";
-import { View, Text, ActivityIndicator, Image } from "react-native";
-import { Button } from "react-native-paper";
-import styles from "./styles";
-import Colors from "../../utills/Colors";
+import * as React from 'react';
+import {View, Text, ActivityIndicator, Image} from 'react-native';
+import {Button} from 'react-native-paper';
+import styles from './styles';
+import Colors from '../../utills/Colors';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+} from 'react-native-responsive-screen';
 const CustomButtonhere = ({
   icon,
   mode,
@@ -21,7 +21,7 @@ const CustomButtonhere = ({
   labelWidth,
 }) => {
   return (
-    <View style={[styles.container, { top: hp(topDistance) }]}>
+    <View style={[styles.container, {top: hp(topDistance)}]}>
       <Button
         icon={icon}
         color={Colors.Appthemecolor}
@@ -31,8 +31,8 @@ const CustomButtonhere = ({
           {
             width: wp(widthset),
             backgroundColor:
-              iscolor === "login" ? "white" : Colors.Appthemecolor,
-            color: iscolor === "login" ? "white" : Colors.Appthemecolor,
+              iscolor === 'login' ? 'white' : Colors.Appthemecolor,
+            color: iscolor === 'login' ? 'white' : Colors.Appthemecolor,
           },
         ]}
         style={[
@@ -40,23 +40,23 @@ const CustomButtonhere = ({
           {
             width: wp(widthset),
             backgroundColor:
-              iscolor === "login" ? "white" : Colors.Appthemecolor,
+              iscolor === 'login' ? 'white' : Colors.Appthemecolor,
           },
         ]}
         labelStyle={[
           styles.label,
           {
-            color: iscolor === "login" ? Colors.Appthemecolor : "white",
-            textTransform: "uppercase",
+            color: iscolor === 'login' ? Colors.Appthemecolor : 'white',
+            textTransform: 'uppercase',
             backgroundColor:
-              iscolor === "login" ? "white" : Colors.Appthemecolor,
+              iscolor === 'login' ? 'white' : Colors.Appthemecolor,
             width: labelWidth ? labelWidth : wp(widthset / 2),
+            paddingTop: 9,
           },
         ]}
         onPress={onPress}
         disabled={disable}
-        loading={loading}
-      >
+        loading={loading}>
         {title}
       </Button>
     </View>

@@ -182,7 +182,7 @@ const OtherProfile = ({navigation}) => {
       <StatusBar backgroundColor="white" barStyle="dark-content" />
 
       <View style={styles.header}>
-        <View style={{marginTop: wp(5)}}>
+        <View style={{marginTop: hp(6)}}>
           <Icon
             name={'arrow-back'}
             size={25}

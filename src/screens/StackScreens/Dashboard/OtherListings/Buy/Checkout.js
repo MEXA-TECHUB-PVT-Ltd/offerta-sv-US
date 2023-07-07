@@ -67,7 +67,7 @@ const Checkout = ({navigation, route}) => {
   // // new
   const createListingOrder = async () => {
     try {
-      console.log('createListingOrder  _________________________called...');
+      console.log('createListingOrder  ');
       setLoading(true);
       let mode = route?.params?.payment_type == 'Paypal' ? 'paypal' : 'stripe';
       create_order_Listings_new(
@@ -114,21 +114,43 @@ const Checkout = ({navigation, route}) => {
               });
             } else {
               // navigation.replace("CardDetails");
-              navigation.replace('StripePayment', {
+              navigation.navigate('StripePayment', {
                 fee: fee,
                 type: 'listing_stripe',
                 order_details: response?.data,
                 // ...route?.params,
                 //live streaming params
                 user_id: route?.params?.user_id,
-                listing_user_detail: route?.params?.listing_user_detail,
-                buy_type: route?.params?.buy_type,
-                quantity: route?.params?.quantity,
-                streamId: route?.params?.streamId,
+                listing_user_detail: route?.params?.listing_user_detail
+                  ? route?.params?.listing_user_detail
+                  : '',
+                buy_type: route?.params?.buy_type
+                  ? route?.params?.buy_type
+                  : '',
+                quantity: route?.params?.quantity
+                  ? route?.params?.quantity
+                  : '',
+                streamId: route?.params?.streamId
+                  ? route?.params?.streamId
+                  : '',
                 //live stream
-                response: route?.params?.response,
-                host: route?.params?.host,
+                response: route?.params?.response
+                  ? route?.params?.response
+                  : '',
+                host: route?.params?.host ? route?.params?.host : '',
               });
+              // console.log(
+              //   fee,
+              //   response?.data,
+              //   route?.params?.user_id,
+              //   route?.params?.listing_user_detail,
+              //   route?.params?.buy_type,
+              //   route?.params?.quantity,
+              //   route?.params?.streamId,
+              //   route?.params?.response,
+              //   route?.params?.host,
+              //   'sdf',
+              // );
             }
           } else {
             alert('Something went wrong');

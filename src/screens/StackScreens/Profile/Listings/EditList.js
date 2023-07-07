@@ -334,20 +334,20 @@ const EditList = ({navigation, route}) => {
             overflow: 'hidden',
             borderRadius: 20,
           }}> */}
-        <Image
-          source={
-            route.params.navtype === 'edit_list'
-              ? {uri: item?.path ? item?.path : IMAGE_URL + item}
-              : {uri: item.path}
-          }
-          style={{
-            height: hp(20),
-            width: wp(84),
+          <Image
+            source={
+              route.params.navtype === 'edit_list'
+                ? {uri: item?.path ? item?.path : IMAGE_URL + item}
+                : {uri: item.path}
+            }
+            style={{
+              height: hp(20),
+              width: wp(84),
 
-            alignSelf: 'center',
-          }}
-          resizeMode="contain"
-        />
+              alignSelf: 'center',
+            }}
+            resizeMode="cover"
+          />
         {/* </ImageBackground> */}
         <TouchableOpacity
           onPress={() => navigation.navigate('CameraViewScreen')}

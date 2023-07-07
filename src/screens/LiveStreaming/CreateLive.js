@@ -13,6 +13,7 @@ import {
   useWindowDimensions,
   StyleSheet,
   ImageBackground,
+  Keyboard,
 } from 'react-native';
 
 import CustomHeader from '../../components/Header/CustomHeader';
@@ -48,13 +49,11 @@ import {get_User_Listings, get_all_listings} from '../../api/GetApis';
 import {BASE_URL, IMAGE_URL} from '../../utills/ApiRootUrl';
 import axios from 'axios';
 import LiveStreamingKeys from '../../utills/LiveStreamingKeys';
+import {TouchableWithoutFeedback} from 'react-native';
 
 const CreateLive = ({navigation, route}) => {
   const ref_RBSheet = useRef();
   const [quantity, setQuantity] = useState('');
-
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
 
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
@@ -221,9 +220,15 @@ const CreateLive = ({navigation, route}) => {
     });
     setData(newData);
   };
-
-  const handleGoLive = async () => {
+  const [user_id, setUser_id] = useState('');
+  const Service = async () => {
     var user_id = await AsyncStorage.getItem('Userid');
+    setUser_id(user_id);
+  };
+  useEffect(() => {
+    Service();
+  }, []);
+  const handleGoLive = async () => {
     setLoading(true);
     let selectedListings = data
       ?.filter(item => item?.selected == true)
@@ -261,6 +266,7 @@ const CreateLive = ({navigation, route}) => {
             createdAt: firestore.FieldValue.serverTimestamp(),
           };
           console.log('obj : ', obj);
+          setLoading(false);
           firestore()
             .collection('live_stream')
             .doc(stream_id?.toString())
@@ -290,6 +296,8 @@ const CreateLive = ({navigation, route}) => {
     //   .add(obj);
     // navigation.navigate("WatchLiveStream");
   };
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
   return (
     <SafeAreaView style={styles.container}>
@@ -298,275 +306,267 @@ const CreateLive = ({navigation, route}) => {
         barStyle="light-content"
       />
       <Loader isLoading={loading} />
-      <View
-        style={{
-          backgroundColor: 'white',
-          height: hp(100),
-          // alignItems: 'center',
-        }}>
-        {/* <CustomHeader type={"profile"} headerlabel={"Live Streaming"} /> */}
-        <Loader isLoading={loading} />
-        <CustomHeader
-          headerlabel={'Create Live'}
-          iconPress={() => {
-            navigation.goBack();
-          }}
-          type={'left_icon'}
-          icon={'arrow-back'}
-          searchicon={'plus-box'}
-          onpresseacrh={() => {
-            navigation.navigate('UploadItem');
-          }}
-        />
-        <CustomTextInput
-          maxLength={15}
-          icon={appImages.email}
-          type={'withouticoninput'}
-          texterror={'invalid'}
-          term={title}
-          placeholder={TranslationStrings.ITEM_TITLE}
-          onTermChange={itemtitle => setTitle(itemtitle)}
-        />
-        <CustomTextInput
-          maxLength={30}
-          icon={appImages.email}
-          type={'withouticoninput'}
-          texterror={'invalid'}
-          term={description}
-          multiline={true}
-          Lines={3}
-          placeholder={TranslationStrings.DESCRIPTION}
-          onTermChange={desc => setDescription(desc)}
-        />
+      <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        <View
+          style={{
+            backgroundColor: 'white',
+            height: hp(100),
+            // alignItems: 'center',
+          }}>
+          {/* <CustomHeader type={"profile"} headerlabel={"Live Streaming"} /> */}
+          <Loader isLoading={loading} />
+          <CustomHeader
+            headerlabel={'Create Live'}
+            iconPress={() => {
+              navigation.goBack();
+            }}
+            type={'left_icon'}
+            icon={'arrow-back'}
+            searchicon={'plus-box'}
+            onpresseacrh={() => {
+              navigation.navigate('UploadItem');
+            }}
+          />
+          <CustomTextInput
+            maxLength={15}
+            icon={appImages.email}
+            type={'withouticoninput'}
+            texterror={'invalid'}
+            term={title}
+            placeholder={TranslationStrings.ITEM_TITLE}
+            onTermChange={itemtitle => setTitle(itemtitle)}
+          />
+          <CustomTextInput
+            maxLength={30}
+            icon={appImages.email}
+            type={'withouticoninput'}
+            texterror={'invalid'}
+            term={description}
+            multiline={true}
+            Lines={3}
+            placeholder={TranslationStrings.DESCRIPTION}
+            onTermChange={desc => setDescription(desc)}
+          />
+          <FlatList
+            // ListHeaderComponent={
 
-        <FlatList
-          // ListHeaderComponent={
-          //   <CustomHeader
-          //     headerlabel={'Create Live'}
-          //     iconPress={() => {
-          //       navigation.goBack();
-          //     }}
-          //     type={'left_icon'}
-          //     icon={'arrow-back'}
-          //     searchicon={'plus-box'}
-          //     onpresseacrh={() => {
-          //       navigation.navigate('UploadItem');
-          //     }}
-          //   />
-          // }
-          data={data}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({item, index}) => {
-            return (
-              <Card
-                style={styles.card}
-                // onPress={() => {
-                //   setSelectedItemId(item?.id);
-                //   ref_RBSheet.current?.open();
-                // }}
-              >
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                  }}>
-                  <CustomCheckBox
-                    checked={item?.selected}
-                    onPress={() => {
-                      if (!item?.selected) {
-                        setSelectedItem(item);
-                        setQuantity(item?.quantity);
-                        setFixedPrice(
-                          item?.fixed_price == 'true' ||
-                            item?.fixed_price == true
-                            ? true
-                            : false,
-                        );
-                        setGiveAway(
-                          item?.giveaway == 'true' || item?.giveaway == true
-                            ? true
-                            : false,
-                        );
-                        ref_RBSheet.current?.open();
-                      } else {
-                        handleUnSelectItem(item?.id);
-                      }
-                    }}
-                  />
-                  {/* <View style={styles.cardImageView}> */}
-                  {item?.images?.length > 0 ? (
-                    <Image
-                      source={{uri: IMAGE_URL + item?.images[0]}}
-                      style={styles.cardImage}
-                    />
-                  ) : (
-                    <Image
-                      source={appImages.no_image}
-                      style={{
-                        ...styles.cardImage,
-                        // height: 50,
-                        // width: 50,
-                        // resizeMode: "contain",
+            // }
+            data={data}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({item, index}) => {
+              return (
+                <Card
+                  style={styles.card}
+                  // onPress={() => {
+                  //   setSelectedItemId(item?.id);
+                  //   ref_RBSheet.current?.open();
+                  // }}
+                >
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                    }}>
+                    <CustomCheckBox
+                      checked={item?.selected}
+                      onPress={() => {
+                        if (!item?.selected) {
+                          setSelectedItem(item);
+                          setQuantity(item?.quantity);
+                          setFixedPrice(
+                            item?.fixed_price == 'true' ||
+                              item?.fixed_price == true
+                              ? true
+                              : false,
+                          );
+                          setGiveAway(
+                            item?.giveaway == 'true' || item?.giveaway == true
+                              ? true
+                              : false,
+                          );
+                          ref_RBSheet.current?.open();
+                        } else {
+                          handleUnSelectItem(item?.id);
+                        }
                       }}
                     />
-                  )}
-                  {/* </View> */}
+                    {/* <View style={styles.cardImageView}> */}
+                    {item?.images?.length > 0 ? (
+                      <Image
+                        source={{uri: IMAGE_URL + item?.images[0]}}
+                        style={styles.cardImage}
+                      />
+                    ) : (
+                      <Image
+                        source={appImages.no_image}
+                        style={{
+                          ...styles.cardImage,
+                          // height: 50,
+                          // width: 50,
+                          // resizeMode: "contain",
+                        }}
+                      />
+                    )}
+                    {/* </View> */}
 
-                  <View style={{flex: 1}}>
-                    <View style={styles.rowView}>
-                      <Text
-                        style={{...styles.boldText, flex: 0.7}}
-                        numberOfLines={1}>
-                        {item?.title}
-                      </Text>
-                      <Text style={styles.boldText}>{item?.price}$</Text>
-                    </View>
-                    <View style={styles.rowView}>
-                      <Text style={styles.mediumText}>
-                        {TranslationStrings.QUANTITY}:
-                      </Text>
-                      <Text style={styles.mediumText}>
-                        {item?.quantity == '' ? 0 : item?.quantity}
-                      </Text>
-                    </View>
-                    <View style={styles.tagView}>
-                      {item?.fixed_price != 'false' &&
-                        item?.fixed_price != false && (
-                          <View style={styles.tag}>
-                            <Text style={styles.tagText}>Fixed Price</Text>
-                          </View>
-                        )}
-                      {item?.giveaway != 'false' && item?.giveaway != false && (
-                        <View style={styles.tag}>
-                          <Text style={styles.tagText}>Giving Away</Text>
-                        </View>
-                      )}
+                    <View style={{flex: 1}}>
+                      <View style={styles.rowView}>
+                        <Text
+                          style={{...styles.boldText, flex: 0.7}}
+                          numberOfLines={1}>
+                          {item?.title}
+                        </Text>
+                        <Text style={styles.boldText}>{item?.price}$</Text>
+                      </View>
+                      <View style={styles.rowView}>
+                        <Text style={styles.mediumText}>
+                          {TranslationStrings.QUANTITY}:
+                        </Text>
+                        <Text style={styles.mediumText}>
+                          {item?.quantity == '' ? 0 : item?.quantity}
+                        </Text>
+                      </View>
+                      <View style={styles.tagView}>
+                        {item?.fixed_price != 'false' &&
+                          item?.fixed_price != false && (
+                            <View style={styles.tag}>
+                              <Text style={styles.tagText}>Fixed Price</Text>
+                            </View>
+                          )}
+                        {item?.giveaway != 'false' &&
+                          item?.giveaway != false && (
+                            <View style={styles.tag}>
+                              <Text style={styles.tagText}>Giving Away</Text>
+                            </View>
+                          )}
+                      </View>
                     </View>
                   </View>
-                </View>
-              </Card>
-            );
-          }}
-          ListEmptyComponent={() => (
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Text style={{color: '#000'}}>No Record Found</Text>
-            </View>
-          )}
-          ListFooterComponent={() => <View style={{height: 70}} />}
-        />
+                </Card>
+              );
+            }}
+            ListEmptyComponent={() => (
+              <View
+                style={{
+                  flex: 1,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text style={{color: '#000'}}>No Record Found</Text>
+              </View>
+            )}
+            ListFooterComponent={() => <View style={{height: 70}} />}
+          />
 
-        <TouchableOpacity style={styles.btn} onPress={() => handleGoLive()}>
-          <Text style={styles.btnText}>{TranslationStrings.GO_LIVE_NOW}</Text>
-        </TouchableOpacity>
-        <RBSheet
-          ref={ref_RBSheet}
-          height={395}
-          openDuration={250}
-          customStyles={{
-            container: {
-              borderTopLeftRadius: 30,
-              borderTopRightRadius: 30,
-              padding: 20,
-            },
-          }}>
-          <View style={{flex: 1}}>
-            <Text style={styles.boldText}>Item Details</Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginVertical: 10,
-              }}>
-              {selectedItem?.images?.length > 0 ? (
-                <Image
-                  source={{uri: IMAGE_URL + selectedItem?.images[0]}}
-                  style={styles.cardImage}
-                />
-              ) : (
-                <Image
-                  source={appImages.no_image}
-                  style={{
-                    ...styles.cardImage,
-                  }}
-                />
-              )}
-
-              <View style={{flex: 1}}>
-                <View style={styles.rowView}>
-                  <Text style={styles.mediumText}>{selectedItem?.title}</Text>
-                  <Text style={styles.boldText}>{selectedItem?.price}$</Text>
-                </View>
-                <View style={{...styles.rowView, justifyContent: 'flex-start'}}>
-                  <Ionicons
-                    name={'location'}
-                    size={15}
-                    color={Colors.activetextinput}
+          <TouchableOpacity style={styles.btn} onPress={() => handleGoLive()}>
+            <Text style={styles.btnText}>{TranslationStrings.GO_LIVE_NOW}</Text>
+          </TouchableOpacity>
+          <RBSheet
+            ref={ref_RBSheet}
+            height={395}
+            openDuration={250}
+            customStyles={{
+              container: {
+                borderTopLeftRadius: 30,
+                borderTopRightRadius: 30,
+                padding: 20,
+              },
+            }}>
+            <View style={{flex: 1}}>
+              <Text style={styles.boldText}>Item Details</Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginVertical: 10,
+                }}>
+                {selectedItem?.images?.length > 0 ? (
+                  <Image
+                    source={{uri: IMAGE_URL + selectedItem?.images[0]}}
+                    style={styles.cardImage}
                   />
-                  <Text
+                ) : (
+                  <Image
+                    source={appImages.no_image}
                     style={{
-                      color: Colors.Appthemecolor,
-                      fontFamily: fontFamily.Poppins_Regular,
-                      fontSize: 11,
-                      marginBottom: -3,
-                    }}>
-                    {selectedItem?.location}
-                  </Text>
+                      ...styles.cardImage,
+                    }}
+                  />
+                )}
+
+                <View style={{flex: 1}}>
+                  <View style={styles.rowView}>
+                    <Text style={styles.mediumText}>{selectedItem?.title}</Text>
+                    <Text style={styles.boldText}>{selectedItem?.price}$</Text>
+                  </View>
+                  <View
+                    style={{...styles.rowView, justifyContent: 'flex-start'}}>
+                    <Ionicons
+                      name={'location'}
+                      size={15}
+                      color={Colors.activetextinput}
+                    />
+                    <Text
+                      style={{
+                        color: Colors.Appthemecolor,
+                        fontFamily: fontFamily.Poppins_Regular,
+                        fontSize: 11,
+                        marginBottom: -3,
+                      }}>
+                      {selectedItem?.location}
+                    </Text>
+                  </View>
                 </View>
               </View>
-            </View>
-            <View
-              style={{
-                height: 1,
-                backgroundColor: '#00000017',
-                marginVertical: 10,
-              }}
-            />
-
-            <CustomTextInput
-              icon={appImages.email}
-              type={'withouticoninput'}
-              texterror={'invalid'}
-              keyboard_type="numeric"
-              placeholder={'Enter Quantity'}
-              term={quantity?.toString() == 0 ? '' : quantity?.toString()}
-              onTermChange={itemtitle => setQuantity(itemtitle)}
-            />
-            <View
-              style={{
-                marginVertical: 10,
-                height: 50,
-              }}>
-              <View style={{...styles.rowView, marginBottom: 10}}>
-                <Text style={styles.mediumText}>Fixed Price{fixedPrice}</Text>
-                <CustomCheckBox
-                  checked={fixedPrice}
-                  onPress={() => setFixedPrice(!fixedPrice)}
-                  size={22}
-                />
-              </View>
-              <View style={styles.rowView}>
-                <Text style={styles.mediumText}>Giving Away</Text>
-                <CustomCheckBox
-                  checked={giveAway}
-                  onPress={() => setGiveAway(!giveAway)}
-                  size={22}
-                />
-              </View>
-              <CustomButtonhere
-                title={TranslationStrings.SAVE}
-                widthset={80}
-                topDistance={4}
-                onPress={() => handleUpdateItem(selectedItem)}
+              <View
+                style={{
+                  height: 1,
+                  backgroundColor: '#00000017',
+                  marginVertical: 10,
+                }}
               />
+
+              <CustomTextInput
+                icon={appImages.email}
+                type={'withouticoninput'}
+                texterror={'invalid'}
+                keyboard_type="numeric"
+                placeholder={'Enter Quantity'}
+                term={quantity?.toString() == 0 ? '' : quantity?.toString()}
+                onTermChange={itemtitle => setQuantity(itemtitle)}
+              />
+              <View
+                style={{
+                  marginVertical: 10,
+                  height: 50,
+                }}>
+                <View style={{...styles.rowView, marginBottom: 10}}>
+                  <Text style={styles.mediumText}>Fixed Price{fixedPrice}</Text>
+                  <CustomCheckBox
+                    checked={fixedPrice}
+                    onPress={() => setFixedPrice(!fixedPrice)}
+                    size={22}
+                  />
+                </View>
+                <View style={styles.rowView}>
+                  <Text style={styles.mediumText}>Giving Away</Text>
+                  <CustomCheckBox
+                    checked={giveAway}
+                    onPress={() => setGiveAway(!giveAway)}
+                    size={22}
+                  />
+                </View>
+                <CustomButtonhere
+                  title={TranslationStrings.SAVE}
+                  widthset={80}
+                  topDistance={4}
+                  onPress={() => handleUpdateItem(selectedItem)}
+                />
+              </View>
             </View>
-          </View>
-        </RBSheet>
-      </View>
+          </RBSheet>
+        </View>
+      </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 };
@@ -621,7 +621,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: Colors.Appthemecolor,
     position: 'absolute',
-    bottom: 20,
+    bottom: hp(10),
     flexDirection: 'row',
     alignSelf: 'center',
   },

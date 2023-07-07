@@ -5,6 +5,7 @@ import {
   Alert,
   TouchableOpacity,
   BackHandler,
+  SafeAreaView,
 } from 'react-native';
 import React, {useEffect, useState, useRef} from 'react';
 import {
@@ -62,7 +63,7 @@ const StripePayment = ({navigation, route}) => {
 
   const [currentPaymentIntent, setCurrentPaymentIntent] = useState('');
 
-  console.log('Publishable_key  : ', Publishable_key);
+  // console.log('Publishable_key  : ', Publishable_key);
   useEffect(() => {
     initializePaymentSheet();
   }, []);
@@ -70,6 +71,7 @@ const StripePayment = ({navigation, route}) => {
   //__________________________Strip Payment______________________________________________
   const {confirmPayment} = useStripe();
   const {initPaymentSheet, presentPaymentSheet, loading} = usePaymentSheet();
+
   const initializePaymentSheet = async item => {
     try {
       setLoading1(true);
@@ -80,7 +82,9 @@ const StripePayment = ({navigation, route}) => {
       });
       const {paymentIntent, ephemeralKey, customer} =
         await fetchPaymentSheetParams(item);
-
+      // console.log(
+      //   paymentIntent, ephemeralKey, customer,'normal data'
+      // );
       if (paymentIntent) {
         await AsyncStorage.setItem('paymentIntent', paymentIntent);
       }
@@ -124,7 +128,7 @@ const StripePayment = ({navigation, route}) => {
         console.log('ready');
         openPaymentSheet();
       }
-      setLoading1(false);
+      // setLoading1(false);
     } catch (error) {
       console.log('Error catch : ', error);
     }
@@ -143,7 +147,14 @@ const StripePayment = ({navigation, route}) => {
 
     return () => backHandler.remove();
   }, []);
-
+  const [user_id, setUser_id] = useState('');
+  const service = async () => {
+    var user_id = await AsyncStorage.getItem('Userid');
+    setUser_id(user_id);
+  };
+  useEffect(() => {
+    service();
+  }, []);
   //createPaymentIntent
   const fetchPaymentSheetParams = async item => {
     try {
@@ -154,7 +165,6 @@ const StripePayment = ({navigation, route}) => {
       let amount = route?.params?.fee ? route?.params?.fee : '1.00';
       amount = parseInt(amount) + parseInt(shipping_cost);
 
-      var user_id = await AsyncStorage.getItem('Userid');
       let user_detail = await get_specific_user_detail(user_id);
       let obj = {
         email: user_detail ? user_detail?.email : 'test@gmail.com',
@@ -167,11 +177,12 @@ const StripePayment = ({navigation, route}) => {
       console.log('obj : ', obj);
 
       let response = await get_stripe_payment_detail(obj);
-      let response1 = response?.data;
-      let paymentIntent = response1?.paymentIntent?.client_secret;
-      let ephemeralKey = response1?.empheralkey;
-      let customer = response1?.customerid;
+      let response1 = await response?.data;
+      let paymentIntent = await response1?.paymentIntent?.client_secret;
+      let ephemeralKey = await response1?.empheralkey;
+      let customer = await response1?.customerid;
 
+      // console.log(response1, paymentIntent, ephemeralKey, customer,response);
       return {
         paymentIntent,
         ephemeralKey,
@@ -243,7 +254,8 @@ const StripePayment = ({navigation, route}) => {
         console.log('route?.params?.type  not found', route?.params?.type);
       }
 
-      //   Alert.alert("Success", "Your order is confirmed!");
+      // Alert.alert("Success", "Your order is confirmed!");
+      // navigation.goBack();
     }
   };
 
@@ -604,7 +616,7 @@ const StripePayment = ({navigation, route}) => {
   };
 
   return (
-    <View style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       <Loader isLoading={loading1} />
       <CustomHeader
         headerlabel={TranslationStrings.BUY}
@@ -663,12 +675,12 @@ const StripePayment = ({navigation, route}) => {
             });
           } else {
             // navigation.navigate("BottomTab")
-            navigation.replace('SalesOrders');
+            navigation.navigate('SalesOrders');
             setModalVisible(false);
           }
         }}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
