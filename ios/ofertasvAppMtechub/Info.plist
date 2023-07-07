@@ -9,7 +9,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>ofertasvAppMtechub</string>
+	<string>ofertasvusmtechub</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -69,7 +69,7 @@
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:ofertasvappmtechub.page.link</string>
+		<string>applinks:ofertasvusmtechub.page.link</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
