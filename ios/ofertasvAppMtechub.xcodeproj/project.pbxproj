@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ofertasvAppMtechubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ofertasvAppMtechubTests.m */; };
+		00E356F31AD99517003FC87E /* ofertasvusmtechubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ofertasvusmtechubTests.m */; };
 		0244E06C2A3F47B200D08066 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 0244E06B2A3F47B200D08066 /* Fonts */; };
 		02FD2F802A3E0E3300B279DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02FD2F7F2A3E0E3300B279DA /* GoogleService-Info.plist */; };
 		02FD2F812A3E0E3300B279DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02FD2F7F2A3E0E3300B279DA /* GoogleService-Info.plist */; };
@@ -27,14 +27,14 @@
 		5FFDC2BD639948169FCF7DB1 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F8BF60B84CE4E3398E126A7 /* Poppins-ExtraLight.ttf */; };
 		6159F1E64173463B94F75D38 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5D96B9358A34839AEE19332 /* Poppins-BlackItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8A4E8852B946108590089B1B /* Pods_ofertasvAppMtechub_ofertasvAppMtechubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D365D5A1DEFDDB0F9E57D6AA /* Pods_ofertasvAppMtechub_ofertasvAppMtechubTests.framework */; };
+		8A4E8852B946108590089B1B /* Pods_ofertasvusmtechub_ofertasvusmtechubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D365D5A1DEFDDB0F9E57D6AA /* Pods_ofertasvusmtechub_ofertasvusmtechubTests.framework */; };
 		977CA91185C3416397CB0163 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 847655805714405BBDB5D6BD /* Poppins-ThinItalic.ttf */; };
 		979E3015CDF04A5780E799E0 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B7C9C03194346248CB35394 /* Poppins-Black.ttf */; };
 		9AE6968BDA804B22852E05F4 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFCAFABEC4F146CCA3088136 /* Poppins-SemiBold.ttf */; };
 		B4BEBDB703374DCE92B0E93F /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 566B2A50F556448297F4AA77 /* Poppins-Regular.ttf */; };
 		C0946E8B318547D3AB5F0ED9 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 380820DF4C3E4957A6768338 /* Poppins-Medium.ttf */; };
 		E024CE50D18149CF9B5D8DCF /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE777A76A43540F987386034 /* Poppins-ExtraBoldItalic.ttf */; };
-		E1CA83288635FA9723C4E5B9 /* Pods_ofertasvAppMtechub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A5C8B458F05267BD50C66A /* Pods_ofertasvAppMtechub.framework */; };
+		E1CA83288635FA9723C4E5B9 /* Pods_ofertasvusmtechub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A5C8B458F05267BD50C66A /* Pods_ofertasvusmtechub.framework */; };
 		F46FF3E0677F45038FC475D2 /* ROCK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = E851BAA7BDF044E3961CB090 /* ROCK.TTF */; };
 /* End PBXBuildFile section */
 
@@ -44,35 +44,35 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ofertasvAppMtechub;
+			remoteInfo = ofertasvusmtechub;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ofertasvAppMtechubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ofertasvAppMtechubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ofertasvusmtechubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ofertasvusmtechubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ofertasvAppMtechubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ofertasvAppMtechubTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ofertasvusmtechubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ofertasvusmtechubTests.m; sourceTree = "<group>"; };
 		0244E06B2A3F47B200D08066 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		02FD2F7F2A3E0E3300B279DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ofertasvAppMtechub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ofertasvAppMtechub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ofertasvAppMtechub/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ofertasvAppMtechub/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ofertasvAppMtechub/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ofertasvAppMtechub/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ofertasvAppMtechub/main.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ofertasvusmtechub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ofertasvusmtechub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ofertasvusmtechub/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ofertasvusmtechub/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ofertasvusmtechub/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ofertasvusmtechub/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ofertasvusmtechub/main.m; sourceTree = "<group>"; };
 		22EFCF2D89644397A3F8219C /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
-		25A5C8B458F05267BD50C66A /* Pods_ofertasvAppMtechub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofertasvAppMtechub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A5C8B458F05267BD50C66A /* Pods_ofertasvusmtechub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofertasvusmtechub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		380820DF4C3E4957A6768338 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-ofertasvAppMtechub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvAppMtechub.debug.xcconfig"; path = "Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub.debug.xcconfig"; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-ofertasvusmtechub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvusmtechub.debug.xcconfig"; path = "Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub.debug.xcconfig"; sourceTree = "<group>"; };
 		5559316849DD458D840C2925 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		566B2A50F556448297F4AA77 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-ofertasvAppMtechub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvAppMtechub.release.xcconfig"; path = "Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.debug.xcconfig"; path = "Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-ofertasvusmtechub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvusmtechub.release.xcconfig"; path = "Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-ofertasvusmtechub-ofertasvusmtechubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvusmtechub-ofertasvusmtechubTests.debug.xcconfig"; path = "Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73F007CF95ED4A0A89830CD7 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		7C42E290C85C4802922D2666 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ofertasvAppMtechub/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ofertasvusmtechub/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847655805714405BBDB5D6BD /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.release.xcconfig"; path = "Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.release.xcconfig"; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-ofertasvusmtechub-ofertasvusmtechubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofertasvusmtechub-ofertasvusmtechubTests.release.xcconfig"; path = "Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F8BF60B84CE4E3398E126A7 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		9ABAD407A5AB49D8984DA23D /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../src/assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		9B7C9C03194346248CB35394 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		B19DAE475E8B46B7A3CE4041 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		BE777A76A43540F987386034 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		CFCAFABEC4F146CCA3088136 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		D365D5A1DEFDDB0F9E57D6AA /* Pods_ofertasvAppMtechub_ofertasvAppMtechubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofertasvAppMtechub_ofertasvAppMtechubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D365D5A1DEFDDB0F9E57D6AA /* Pods_ofertasvusmtechub_ofertasvusmtechubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofertasvusmtechub_ofertasvusmtechubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FC8144ABDE465CA882D966 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		E851BAA7BDF044E3961CB090 /* ROCK.TTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = ROCK.TTF; path = ../src/assets/fonts/ROCK.TTF; sourceTree = "<group>"; };
 		E90841D368574E39A8093285 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A4E8852B946108590089B1B /* Pods_ofertasvAppMtechub_ofertasvAppMtechubTests.framework in Frameworks */,
+				8A4E8852B946108590089B1B /* Pods_ofertasvusmtechub_ofertasvusmtechubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,20 +102,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CA83288635FA9723C4E5B9 /* Pods_ofertasvAppMtechub.framework in Frameworks */,
+				E1CA83288635FA9723C4E5B9 /* Pods_ofertasvusmtechub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* ofertasvAppMtechubTests */ = {
+		00E356EF1AD99517003FC87E /* ofertasvusmtechubTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ofertasvAppMtechubTests.m */,
+				00E356F21AD99517003FC87E /* ofertasvusmtechubTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ofertasvAppMtechubTests;
+			path = ofertasvusmtechubTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -126,7 +126,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* ofertasvAppMtechub */ = {
+		13B07FAE1A68108700A75B9A /* ofertasvusmtechub */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -138,15 +138,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = ofertasvAppMtechub;
+			name = ofertasvusmtechub;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				25A5C8B458F05267BD50C66A /* Pods_ofertasvAppMtechub.framework */,
-				D365D5A1DEFDDB0F9E57D6AA /* Pods_ofertasvAppMtechub_ofertasvAppMtechubTests.framework */,
+				25A5C8B458F05267BD50C66A /* Pods_ofertasvusmtechub.framework */,
+				D365D5A1DEFDDB0F9E57D6AA /* Pods_ofertasvusmtechub_ofertasvusmtechubTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* ofertasvAppMtechub */,
+				13B07FAE1A68108700A75B9A /* ofertasvusmtechub */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ofertasvAppMtechubTests */,
+				00E356EF1AD99517003FC87E /* ofertasvusmtechubTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -203,8 +203,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ofertasvAppMtechub.app */,
-				00E356EE1AD99517003FC87E /* ofertasvAppMtechubTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ofertasvusmtechub.app */,
+				00E356EE1AD99517003FC87E /* ofertasvusmtechubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,10 +212,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-ofertasvAppMtechub.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-ofertasvAppMtechub.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-ofertasvusmtechub.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-ofertasvusmtechub.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-ofertasvusmtechub-ofertasvusmtechubTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-ofertasvusmtechub-ofertasvusmtechubTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -223,9 +223,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ofertasvAppMtechubTests */ = {
+		00E356ED1AD99517003FC87E /* ofertasvusmtechubTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ofertasvAppMtechubTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ofertasvusmtechubTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -239,14 +239,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ofertasvAppMtechubTests;
-			productName = ofertasvAppMtechubTests;
-			productReference = 00E356EE1AD99517003FC87E /* ofertasvAppMtechubTests.xctest */;
+			name = ofertasvusmtechubTests;
+			productName = ofertasvusmtechubTests;
+			productReference = 00E356EE1AD99517003FC87E /* ofertasvusmtechubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ofertasvAppMtechub */ = {
+		13B07F861A680F5B00A75B9A /* ofertasvusmtechub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ofertasvAppMtechub" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ofertasvusmtechub" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -262,9 +262,9 @@
 			);
 			dependencies = (
 			);
-			name = ofertasvAppMtechub;
-			productName = ofertasvAppMtechub;
-			productReference = 13B07F961A680F5B00A75B9A /* ofertasvAppMtechub.app */;
+			name = ofertasvusmtechub;
+			productName = ofertasvusmtechub;
+			productReference = 13B07F961A680F5B00A75B9A /* ofertasvusmtechub.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +284,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ofertasvAppMtechub" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ofertasvusmtechub" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -297,8 +297,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ofertasvAppMtechub */,
-				00E356ED1AD99517003FC87E /* ofertasvAppMtechubTests */,
+				13B07F861A680F5B00A75B9A /* ofertasvusmtechub */,
+				00E356ED1AD99517003FC87E /* ofertasvusmtechubTests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,15 +367,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -393,7 +393,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ofertasvusmtechub-ofertasvusmtechubTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,7 +428,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ofertasvAppMtechub-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ofertasvusmtechub-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -441,15 +441,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -458,15 +458,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub/Pods-ofertasvAppMtechub-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub/Pods-ofertasvusmtechub-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -475,15 +475,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests/Pods-ofertasvAppMtechub-ofertasvAppMtechubTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ofertasvusmtechub-ofertasvusmtechubTests/Pods-ofertasvusmtechub-ofertasvusmtechubTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -512,7 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ofertasvAppMtechubTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ofertasvusmtechubTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +530,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ofertasvAppMtechub */;
+			target = 13B07F861A680F5B00A75B9A /* ofertasvusmtechub */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -538,14 +538,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ofertasvusmtechub-ofertasvusmtechubTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ofertasvAppMtechubTests/Info.plist;
+				INFOPLIST_FILE = ofertasvusmtechubTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -559,17 +559,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ofertasvAppMtechub.app/ofertasvAppMtechub";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ofertasvusmtechub.app/ofertasvusmtechub";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ofertasvAppMtechub-ofertasvAppMtechubTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ofertasvusmtechub-ofertasvusmtechubTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ofertasvAppMtechubTests/Info.plist;
+				INFOPLIST_FILE = ofertasvusmtechubTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,13 +583,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ofertasvAppMtechub.app/ofertasvAppMtechub";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ofertasvusmtechub.app/ofertasvusmtechub";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ofertasvAppMtechub.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ofertasvusmtechub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
@@ -597,7 +597,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7BSVR8JS4F;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = ofertasvAppMtechub/Info.plist;
+				INFOPLIST_FILE = ofertasvusmtechub/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OfertaSv;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -611,8 +611,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ofertasvAppMtechub;
-				PRODUCT_NAME = ofertasvAppMtechub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ofertasvusmtechub;
+				PRODUCT_NAME = ofertasvusmtechub;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -621,14 +621,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ofertasvAppMtechub.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ofertasvusmtechub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7BSVR8JS4F;
-				INFOPLIST_FILE = ofertasvAppMtechub/Info.plist;
+				INFOPLIST_FILE = ofertasvusmtechub/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OfertaSv;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -642,8 +642,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ofertasvAppMtechub;
-				PRODUCT_NAME = ofertasvAppMtechub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ofertasvusmtechub;
+				PRODUCT_NAME = ofertasvusmtechub;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -789,7 +789,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ofertasvAppMtechubTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ofertasvusmtechubTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -798,7 +798,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ofertasvAppMtechub" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ofertasvusmtechub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -807,7 +807,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ofertasvAppMtechub" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ofertasvusmtechub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

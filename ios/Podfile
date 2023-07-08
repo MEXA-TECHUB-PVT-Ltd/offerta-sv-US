@@ -31,7 +31,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'ofertasvAppMtechub' do
+target 'ofertasvusmtechub' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -53,7 +53,7 @@ target 'ofertasvAppMtechub' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'ofertasvAppMtechubTests' do
+  target 'ofertasvusmtechubTests' do
     inherit! :complete
     # Pods for testing
   end
